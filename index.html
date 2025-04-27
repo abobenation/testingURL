@@ -1,7 +1,661 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Resume | Your Name</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS for animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.03);
+        }
+        
+        .progress-bar {
+            height: 8px;
+            border-radius: 4px;
+            background-color: #374151;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            border-radius: 4px;
+            background-color: #9ca3af;
+            transition: width 1s ease-in-out;
+        }
+        
+        /* Custom color scheme */
+        .bg-primary { background-color: #111827; }
+        .bg-secondary { background-color: #1f2937; }
+        .bg-accent { background-color: #374151; }
+        .text-accent { color: #9ca3af; }
+        .border-accent { border-color: #374151; }
+    </style>
+</head>
+<body class="bg-gray-900 font-sans antialiased text-gray-200">
+    <!-- Navigation -->
+    <nav class="bg-gray-800 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-gray-200">Your<span class="text-gray-400">Name</span></a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-300 hover:text-white transition">About</a>
+                    <a href="#experience" class="text-gray-300 hover:text-white transition">Experience</a>
+                    <a href="#skills" class="text-gray-300 hover:text-white transition">Skills</a>
+                    <a href="#projects" class="text-gray-300 hover:text-white transition">Projects</a>
+                    <a href="#contact" class="text-gray-300 hover:text-white transition">Contact</a>
+                </div>
+                <button class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-gray-300 text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-gray-800 to-gray-900 py-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 animate-fade-in">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm <span class="text-gray-400">[Your Name]</span></h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-gray-400">[Your Profession]</h2>
+                <p class="text-lg mb-8 text-gray-300">
+                    <!-- REPLACE THIS PARAGRAPH WITH YOUR INTRODUCTION -->
+                    Passionate [profession] with [X] years of experience in [your field]. 
+                    Specializing in [your specialties]. Dedicated to creating impactful solutions 
+                    that drive business success.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="bg-gray-700 text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-600 transition hover-scale">
+                        Contact Me
+                    </a>
+                    <a href="#projects" class="border-2 border-gray-400 px-6 py-3 rounded-full font-semibold hover:bg-gray-800 hover:text-white transition hover-scale">
+                        View Work
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center animate-fade-in delay-100">
+                <!-- REPLACE THIS IMAGE WITH YOUR PROFILE PHOTO -->
+                <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-gray-600 shadow-xl">
+                    <img src="https://via.placeholder.com/400x400" alt="Your Name" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gray-900 opacity-20"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16 relative text-white">
+                <span class="relative inline-block">
+                    About Me
+                    <span class="absolute bottom-0 left-0 w-full h-1 bg-gray-400 rounded-full"></span>
+                </span>
+            </h2>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center animate-fade-in">
+                    <!-- REPLACE THIS IMAGE WITH ANOTHER PROFILE OR ABOUT IMAGE -->
+                    <div class="w-64 h-64 rounded-lg overflow-hidden shadow-lg border border-gray-700">
+                        <img src="https://via.placeholder.com/400x400" alt="About Me" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-12 animate-fade-in delay-100">
+                    <!-- REPLACE THIS CONTENT WITH YOUR ABOUT INFORMATION -->
+                    <p class="text-lg mb-6 text-gray-300">
+                        I'm a dedicated professional with a passion for [your field]. With over [X] years of experience, 
+                        I've helped companies like [Company Names] achieve [specific results]. My approach combines 
+                        technical expertise with creative problem-solving to deliver exceptional results.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-start">
+                            <div class="bg-gray-700 p-3 rounded-full mr-4">
+                                <i class="fas fa-user-tie text-gray-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white mb-1">Professional</h4>
+                                <p class="text-gray-400">[X] years of industry experience</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-gray-700 p-3 rounded-full mr-4">
+                                <i class="fas fa-graduation-cap text-gray-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white mb-1">Education</h4>
+                                <p class="text-gray-400">[Your Degree] from [Your University]</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-gray-700 p-3 rounded-full mr-4">
+                                <i class="fas fa-code text-gray-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white mb-1">Expertise</h4>
+                                <p class="text-gray-400">[Your primary skills or technologies]</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-gray-700 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-gray-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white mb-1">Location</h4>
+                                <p class="text-gray-400">[Your City, Country]</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="inline-flex items-center text-gray-400 font-semibold hover:text-white transition">
+                        Download Resume
+                        <i class="fas fa-download ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16 relative text-white">
+                <span class="relative inline-block">
+                    Work Experience
+                    <span class="absolute bottom-0 left-0 w-full h-1 bg-gray-400 rounded-full"></span>
+                </span>
+            </h2>
+            
+            <div class="max-w-3xl mx-auto">
+                <!-- REPLACE THESE EXPERIENCE ITEMS WITH YOUR OWN -->
+                <div class="mb-12 animate-fade-in">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/4 mb-4 md:mb-0">
+                            <h3 class="text-xl font-bold text-white">[Company Name]</h3>
+                            <p class="text-gray-400">[Start Date] - [End Date]</p>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h4 class="text-xl font-semibold text-gray-400 mb-2">[Job Title]</h4>
+                            <p class="text-gray-300 mb-4">
+                                [Brief description of your role and responsibilities at this position. 
+                                Highlight key achievements and contributions.]
+                            </p>
+                            <ul class="list-disc pl-5 text-gray-400 space-y-2">
+                                <li>Achieved [specific accomplishment] resulting in [quantifiable outcome]</li>
+                                <li>Led [project/initiative] that improved [specific metric] by X%</li>
+                                <li>Developed [specific solution] that addressed [business challenge]</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mb-12 animate-fade-in delay-100">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/4 mb-4 md:mb-0">
+                            <h3 class="text-xl font-bold text-white">[Company Name]</h3>
+                            <p class="text-gray-400">[Start Date] - [End Date]</p>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h4 class="text-xl font-semibold text-gray-400 mb-2">[Job Title]</h4>
+                            <p class="text-gray-300 mb-4">
+                                [Brief description of your role and responsibilities at this position. 
+                                Highlight key achievements and contributions.]
+                            </p>
+                            <ul class="list-disc pl-5 text-gray-400 space-y-2">
+                                <li>Implemented [system/process] that reduced [time/cost] by X%</li>
+                                <li>Collaborated with [team/department] to deliver [project/result]</li>
+                                <li>Recognized for [achievement/award] for [specific contribution]</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="animate-fade-in delay-200">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/4 mb-4 md:mb-0">
+                            <h3 class="text-xl font-bold text-white">[Company Name]</h3>
+                            <p class="text-gray-400">[Start Date] - [End Date]</p>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h4 class="text-xl font-semibold text-gray-400 mb-2">[Job Title]</h4>
+                            <p class="text-gray-300 mb-4">
+                                [Brief description of your role and responsibilities at this position. 
+                                Highlight key achievements and contributions.]
+                            </p>
+                            <ul class="list-disc pl-5 text-gray-400 space-y-2">
+                                <li>Spearheaded [initiative] that expanded [business area] by X%</li>
+                                <li>Mentored [number] team members in [specific skill/area]</li>
+                                <li>Optimized [process/system] leading to [specific benefit]</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16 relative text-white">
+                <span class="relative inline-block">
+                    My Skills
+                    <span class="absolute bottom-0 left-0 w-full h-1 bg-gray-400 rounded-full"></span>
+                </span>
+            </h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- REPLACE THESE SKILLS WITH YOUR OWN -->
+                    <div class="animate-fade-in">
+                        <h3 class="text-xl font-bold mb-6 text-white flex items-center">
+                            <i class="fas fa-laptop-code text-gray-400 mr-3"></i> Technical Skills
+                        </h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium text-gray-300">[Skill 1]</span>
+                                    <span class="text-gray-400">90%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium text-gray-300">[Skill 2]</span>
+                                    <span class="text-gray-400">85%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium text-gray-300">[Skill 3]</span>
+                                    <span class="text-gray-400">80%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium text-gray-300">[Skill 4]</span>
+                                    <span class="text-gray-400">75%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="animate-fade-in delay-100">
+                        <h3 class="text-xl font-bold mb-6 text-white flex items-center">
+                            <i class="fas fa-users text-gray-400 mr-3"></i> Professional Skills
+                        </h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium text-gray-300">[Professional Skill 1]</span>
+                                    <span class="text-gray-400">95%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium text-gray-300">[Professional Skill 2]</span>
+                                    <span class="text-gray-400">90%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium text-gray-300">[Professional Skill 3]</span>
+                                    <span class="text-gray-400">85%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium text-gray-300">[Professional Skill 4]</span>
+                                    <span class="text-gray-400">80%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 animate-fade-in delay-200">
+                    <h3 class="text-xl font-bold mb-6 text-white flex items-center">
+                        <i class="fas fa-tools text-gray-400 mr-3"></i> Tools & Technologies
+                    </h3>
+                    <div class="flex flex-wrap gap-4">
+                        <!-- REPLACE THESE TOOLS WITH YOUR OWN -->
+                        <div class="bg-gray-700 px-4 py-2 rounded-full flex items-center hover-scale">
+                            <i class="fab fa-js-square text-gray-400 text-xl mr-2"></i>
+                            <span class="text-gray-300">[Tool 1]</span>
+                        </div>
+                        <div class="bg-gray-700 px-4 py-2 rounded-full flex items-center hover-scale">
+                            <i class="fab fa-react text-gray-400 text-xl mr-2"></i>
+                            <span class="text-gray-300">[Tool 2]</span>
+                        </div>
+                        <div class="bg-gray-700 px-4 py-2 rounded-full flex items-center hover-scale">
+                            <i class="fab fa-node-js text-gray-400 text-xl mr-2"></i>
+                            <span class="text-gray-300">[Tool 3]</span>
+                        </div>
+                        <div class="bg-gray-700 px-4 py-2 rounded-full flex items-center hover-scale">
+                            <i class="fab fa-python text-gray-400 text-xl mr-2"></i>
+                            <span class="text-gray-300">[Tool 4]</span>
+                        </div>
+                        <div class="bg-gray-700 px-4 py-2 rounded-full flex items-center hover-scale">
+                            <i class="fas fa-database text-gray-400 text-xl mr-2"></i>
+                            <span class="text-gray-300">[Tool 5]</span>
+                        </div>
+                        <div class="bg-gray-700 px-4 py-2 rounded-full flex items-center hover-scale">
+                            <i class="fab fa-git-alt text-gray-400 text-xl mr-2"></i>
+                            <span class="text-gray-300">[Tool 6]</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16 relative text-white">
+                <span class="relative inline-block">
+                    Featured Projects
+                    <span class="absolute bottom-0 left-0 w-full h-1 bg-gray-400 rounded-full"></span>
+                </span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- REPLACE THESE PROJECTS WITH YOUR OWN -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition hover-scale animate-fade-in border border-gray-700">
+                    <!-- REPLACE THIS IMAGE WITH YOUR PROJECT SCREENSHOT -->
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://via.placeholder.com/600x400" alt="Project 1" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-white">[Project Name 1]</h3>
+                        <p class="text-gray-400 mb-4">
+                            [Brief description of the project, its purpose, and your role in it.]
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-700 text-gray-300 text-xs px-3 py-1 rounded-full">[Technology 1]</span>
+                            <span class="bg-gray-700 text-gray-300 text-xs px-3 py-1 rounded-full">[Technology 2]</span>
+                            <span class="bg-gray-700 text-gray-300 text-xs px-3 py-1 rounded-full">[Technology 3]</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-white transition">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white transition">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition hover-scale animate-fade-in delay-100 border border-gray-700">
+                    <!-- REPLACE THIS IMAGE WITH YOUR PROJECT SCREENSHOT -->
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://via.placeholder.com/600x400" alt="Project 2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-white">[Project Name 2]</h3>
+                        <p class="text-gray-400 mb-4">
+                            [Brief description of the project, its purpose, and your role in it.]
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-700 text-gray-300 text-xs px-3 py-1 rounded-full">[Technology 1]</span>
+                            <span class="bg-gray-700 text-gray-300 text-xs px-3 py-1 rounded-full">[Technology 2]</span>
+                            <span class="bg-gray-700 text-gray-300 text-xs px-3 py-1 rounded-full">[Technology 3]</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-white transition">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white transition">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition hover-scale animate-fade-in delay-200 border border-gray-700">
+                    <!-- REPLACE THIS IMAGE WITH YOUR PROJECT SCREENSHOT -->
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://via.placeholder.com/600x400" alt="Project 3" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-white">[Project Name 3]</h3>
+                        <p class="text-gray-400 mb-4">
+                            [Brief description of the project, its purpose, and your role in it.]
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-700 text-gray-300 text-xs px-3 py-1 rounded-full">[Technology 1]</span>
+                            <span class="bg-gray-700 text-gray-300 text-xs px-3 py-1 rounded-full">[Technology 2]</span>
+                            <span class="bg-gray-700 text-gray-300 text-xs px-3 py-1 rounded-full">[Technology 3]</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-white transition">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white transition">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 animate-fade-in delay-300">
+                <a href="#" class="inline-block bg-gray-700 text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-600 transition hover-scale">
+                    View All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16 relative text-white">
+                <span class="relative inline-block">
+                    Get In Touch
+                    <span class="absolute bottom-0 left-0 w-full h-1 bg-gray-400 rounded-full"></span>
+                </span>
+            </h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="animate-fade-in">
+                        <h3 class="text-2xl font-bold mb-6 text-white">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-gray-700 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-gray-400 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white mb-1">Email</h4>
+                                    <p class="text-gray-400">[your.email@example.com]</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-gray-700 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt text-gray-400 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white mb-1">Phone</h4>
+                                    <p class="text-gray-400">[+1 (123) 456-7890]</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-gray-700 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-gray-400 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white mb-1">Location</h4>
+                                    <p class="text-gray-400">[Your City, Country]</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold text-white mb-4">Follow Me</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-gray-700 p-3 rounded-full text-gray-400 hover:bg-gray-600 hover:text-white transition">
+                                    <i class="fab fa-linkedin-in text-xl"></i>
+                                </a>
+                                <a href="#" class="bg-gray-700 p-3 rounded-full text-gray-400 hover:bg-gray-600 hover:text-white transition">
+                                    <i class="fab fa-github text-xl"></i>
+                                </a>
+                                <a href="#" class="bg-gray-700 p-3 rounded-full text-gray-400 hover:bg-gray-600 hover:text-white transition">
+                                    <i class="fab fa-twitter text-xl"></i>
+                                </a>
+                                <a href="#" class="bg-gray-700 p-3 rounded-full text-gray-400 hover:bg-gray-600 hover:text-white transition">
+                                    <i class="fab fa-instagram text-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="animate-fade-in delay-100">
+                        <h3 class="text-2xl font-bold mb-6 text-white">Send Me a Message</h3>
+                        
+                        <form class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-gray-300 font-medium mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent text-white">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-gray-300 font-medium mb-2">Your Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent text-white">
+                            </div>
+                            
+                            <div>
+                                <label for="subject" class="block text-gray-300 font-medium mb-2">Subject</label>
+                                <input type="text" id="subject" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent text-white">
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-gray-300 font-medium mb-2">Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent text-white"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-600 transition w-full hover-scale">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-2xl font-bold text-gray-300">Your<span class="text-gray-400">Name</span></a>
+                    <p class="mt-2">[Your professional tagline]</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#about" class="hover:text-white transition">About</a>
+                    <a href="#experience" class="hover:text-white transition">Experience</a>
+                    <a href="#skills" class="hover:text-white transition">Skills</a>
+                    <a href="#projects" class="hover:text-white transition">Projects</a>
+                    <a href="#contact" class="hover:text-white transition">Contact</a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm mb-4 md:mb-0">
+                    &copy; <span id="year"></span> Your Name. All rights reserved.
+                </p>
+                
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-white transition">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="hover:text-white transition">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="hover:text-white transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="hover:text-white transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script to update the year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Animate progress bars when they come into view
+        const animateOnScroll = () => {
+            const progressBars = document.querySelectorAll('.progress-fill');
+            
+            progressBars.forEach(bar => {
+                const rect = bar.getBoundingClientRect();
+                const isVisible = (rect.top <= window.innerHeight) && (rect.bottom >= 0);
+                
+                if (isVisible && !bar.hasAttribute('data-animated')) {
+                    bar.setAttribute('data-animated', 'true');
+                    // Width is already set via style attribute
+                }
+            });
+        };
+        
+        // Run once on page load
+        document.addEventListener('DOMContentLoaded', animateOnScroll);
+        
+        // Run on scroll
+        window.addEventListener('scroll', animateOnScroll);
+    </script>
 </body>
 </html>
